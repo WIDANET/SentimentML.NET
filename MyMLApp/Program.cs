@@ -1,7 +1,7 @@
 ﻿using MyMLApp;
 
 
-Console.WriteLine("Vai zbct, digita alguma coisa aí:");
+Console.WriteLine("Digite uma frase para analisarmos seu feedback: ");
 var sampleData = new SentimentModel.ModelInput()
 {
     Col0 = Console.ReadLine()
@@ -11,5 +11,5 @@ var sampleData = new SentimentModel.ModelInput()
 var result = SentimentModel.Predict(sampleData);
 
 
-var sentiment = result.PredictedLabel == 1 ? "Pica de cachorro" : "vsfd horrivel Kjkkkkkk";
+var sentiment = result.PredictedLabel == 1 ? "Ótimo feedback" : "Feedback ruim";
 Console.WriteLine($"Texto: {sampleData.Col0}\nSentimento: {sentiment}");
